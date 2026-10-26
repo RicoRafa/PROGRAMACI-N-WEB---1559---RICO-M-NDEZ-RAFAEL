@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Rico Méndez Rafael">
+    <title>Listas y Formularios HTML</title>
+</head>
+<body>
+
+    <h1>Listas y Formularios</h1>
+
+    <div>
+        <h2>LISTAS</h2>
+        <h3>Listas no ordenadas</h3>
+
+        <ul>
+            <li type ="1" start="10">Leche</li>
+            <li>Carne</li>
+            <li>Papel</li>
+            <li>Cereal</li>
+            <li>Agua</li>
+        </ul>
+
+
+        <h3>Listas ordenadas</h3>
+        <ol type="I" start="11" reversed>
+            <li>Primero</li>
+            <li>Segundo</li>
+            <li>Tercero</li>
+            <li>Cuarto</li>
+            <li>Quinto</li>
+            <li>Décimo</li>
+            <li>Onceavo</li>
+        </ol>
+
+        <h3>Listas de definiciones</h3>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Lenguaje de marcado de hipertexto</dd>
+            <dt>CSS</dt>
+            <dd>Hoja de estilos de cascada</dd>
+            <dt>JS</dt>
+            <dd>Java Script</dd>
+        </dl>
+
+        <h3>Listas anidadas</h3>
+        <p>Desarrollo Web</p>
+
+        <ul>
+            <li>FRONTEND 
+                <ol type="a">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JS</li>
+                </ol>
+            </li>
+            <li>BACKEND
+                <ol type="a">
+                    <li>NodeJS</li>
+                    <li>MySQL</li>
+                    <li>ArchLinux</li>
+
+                </ol>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>FORMULARIOS</h2>
+        <h3>Formulario inicio de sesión</h3>
+        
+        <form action="https://www.youtube.com/watch?v=dQw4w9WgXcQ" method="get">
+            <label for="username">Nombre de usuario</label>
+            <input type="text" id="username" name="username" required>
+            <!-- for == id  y por conveniencia for==id==name -->
+            <br><br>
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" placeholder="Contraseña" required>
+
+            <br>
+
+            <button type="submit">Enviar</button>
+
+        </form>
+
+        <hr>         
+
+        <h3>Formulario con campo de entrada de varias lineas</h3>
+        <form action="validar.js" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+            <label for="opinion">Comentario:</label>
+            <textarea name="opinion" id="opinion" placeholder="Tu opinion es importante:" required rows="5"  cols="50"></textarea>
+            <br><br>
+            <button type="submit"> Enviar comentario</button>
+        </form>
+
+        <hr>
+
+        <h3>Formulario con una lista despegable de opciones</h3>
+        <form action="/opciones" method="post">
+            <label for="bebidas">Bebidas:</label>
+            <select name="bebidas" id="bebidas">
+                <option value="coca_cola">Coca-Cola</option>
+                <option value="pepsi" selected>Pepsi</option>                   
+                <option value="boing">Boing</option>
+                <option value="jarritos">Jarritos</option>
+            </select>
+            <!-- selected es para poner algo como predeterminado -->
+
+            <br>
+
+            <label for="postres">Postres:</label>
+            <select name="postres" id="postres">
+                <option value="" disabled selected>Selecciona un postre</option>
+                <option value="pastel">Pastel</option>
+                <option value="pay">Pay</option>
+                <option value="helado">Helado</option>
+            </select>
+            <!-- disable para poner un texto en la lista de opciones pero no es seleccionable -->
+            <br>
+            <input type="submit">
+            
+        </form>
+        
+        <hr>
+        <h3>Formulario con distintos campos de datos</h3>
+
+        <form action="datos.php" method="post">
+            <fieldset>
+                <legend>Nombre completo</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <br>
+                <label for="ap_paterno">Ap. Paterno:</label>
+                <input type="text" id="ap_paterno" name="ap_paterno" required>
+                <br>
+                <label for="ap_materno">Ap. Materno:</label>
+                <input type="text" id="ap_materno" name="ap_materno" required>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Otros datos</legend>
+                <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                <br>
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" required min="18" max="99">
+                <br>
+                <label for="numero_cuenta">Número de cuenta:</label>
+                <input type="text" id="numero_cuenta" name="numero_cuenta" required minlength="9" maxlength="9" pattern="[0-9]{9}">
+                <br>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </fieldset>
+
+            <fieldset>
+                <Legend>Dirección</Legend>
+                <label for="calle">Calle:</label>
+                <input type="text" id="calle" name="calle" required>
+                <br>
+                <label for="no">Número:</label>
+                <input type="text" id="no" name="no" required>
+                <br>
+                <label for="col">Colonia:</label>
+                <input type="text" id="col" name="col" required>
+                <br>
+                <label for="cp">Código postal:</label>
+                <input type="number" id="cp" name="cp" minlength="5" maxlength="5" pattern="[0-9]{5}" required>
+                <!-- calle no. colonia  -->
+            </fieldset>
+
+            <button type="submit">Enviar</button>|
+
+        </form>
+    </div>
+
+</body>
+</html>

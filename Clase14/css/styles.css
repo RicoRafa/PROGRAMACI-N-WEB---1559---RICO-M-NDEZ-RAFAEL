@@ -1,0 +1,152 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-image: linear-gradient(to bottom, black, rgb(144, 113, 149));
+  color: white;
+}
+
+#encabezado {
+  border: 0.2rem solid pink;
+  font-size: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+
+}
+
+.logo {
+  border: 0.2rem solid white;
+  border-radius: 45%;
+  width: 20%;
+  height: 30rem;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 45%;
+}
+
+#encabezado h1 {
+  text-align: center;
+  text-shadow: 0.2rem 0.2rem 0.5rem pink;
+  position: absolute;
+  top: 10rem;
+  left: 30%;
+}
+
+#navegacion ul {
+  list-style-type: none;
+  padding-left: 0;
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  border: 0.2rem solid rgb(255, 129, 150);
+  width: 20%;
+  text-align: center;
+  font-size: 3rem;
+}
+
+#navegacion ul li{
+    display: inline-block;
+}
+
+
+
+#elementos-posicionados {
+  border: 0.2rem solid white;
+  padding: 1rem;
+  height: 150rem;
+  position: relative;
+}
+
+.itachi {
+  border: 0.2rem solid white;
+  width: 40rem;
+  height: 50rem;
+  margin: 0.5rem;
+  position: absolute;
+  top: 0rem;
+}
+
+.itachi img {
+  width: 100%;
+  height: 100%;
+}
+
+.madara {
+  border: 0.2rem solid white;
+  width: 40rem;
+  height: 50rem;
+  margin: 0.5rem;
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  z-index: 2;
+}
+
+.madara img {
+  width: 100%;
+  height: 100%;
+}
+
+.obito {
+  border: 0.2rem solid white;
+  width: 40rem;
+  height: 50rem;
+  margin: 0.5rem;
+  position: absolute;
+  bottom: 0rem;
+  left: 0rem;
+}
+
+.obito img {
+  width: 100%;
+  height: 100%;
+}
+
+.sasuke {
+  border: 0.2rem solid white;
+  width: 40rem;
+  height: 50rem;
+  margin: 0.5rem;
+  position: absolute;
+  bottom: 0rem;
+  right: 0rem;
+}
+
+.sasuke img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* Medias queries: estilos que se le da a la pagina dependiendo el tamaño de pantalla, 
+Sirve para definir los estilos a elementos html segun el tamaño de pantalla de nuestro dispositivo,
+gracias a esto, se proporciona una herramienta que nos sirve para la creación de págunas web responsivas
+o adaptables, si se define varias consultas de medios se deben poner en forma descendente, segun la medida del dispositivo
+
+Moviles(<480px)
+Tablets(480px-960px)
+PC(960px-1280px)
+
+*/
+
+@media screen and (max-width: 1250px) {
+    #encabezado h1{
+    left: 25%;
+    font-size: 2rem;
+    }
+    
+    .logo{
+        height: 15rem;
+    }
+}
+
+
